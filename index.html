@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Hamzah RPL</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigasi -->
+  <header>
+    <nav>
+      <h2 class="logo">Hamzah<span>.</span></h2>
+      <ul>
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#projects">Projek</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+      <button id="modeBtn" onclick="toggleMode()" aria-label="Toggle theme">🌙</button>
+    </nav>
+  </header>
+
+  <!-- Halaman Utama -->
+  <section id="home" class="home">
+    <img src="img/profil.jpg" alt="Foto Profil" class="profile-img" />
+    <h1 class="fade">Halo, Saya <span>Hamzah RPL</span></h1>
+    <p class="fade delay">Pelajar SMK RPL yang suka membuat website modern dan interaktif.</p>
+    <button class="fade delay2" onclick="scrollToSection('projects')">Lihat Projek</button>
+  </section>
+
+  <!-- Projek -->
+  <section id="projects" class="projects">
+    <h2>Projek Saya</h2>
+    <div class="project-container">
+      <div class="card slide">
+        <h3>Website Sekolah</h3>
+        <p>Website informasi sekolah dengan halaman guru dan siswa.</p>
+      </div>
+      <div class="card slide delay">
+        <h3>Form Pendaftaran</h3>
+        <p>Form online dengan validasi menggunakan JavaScript.</p>
+      </div>
+      <div class="card slide delay2">
+        <h3>Konversi PDF ke Word</h3>
+        <p>Aplikasi web sederhana yang mengonversi file PDF ke Word.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="contact" class="contact">
+    <h2>Hubungi Saya</h2>
+    <form id="contactForm" onsubmit="return sendMessage()">
+      <input type="text" id="nama" placeholder="Nama Anda" required>
+      <input type="email" id="email" placeholder="Email Anda" required>
+      <textarea id="pesan" placeholder="Tulis pesan..." required></textarea>
+      <button type="submit">Kirim Pesan</button>
+    </form>
+  </section>
+
+  <!-- Popup notifikasi -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <p id="popupText"></p>
+      <button onclick="closePopup()">Tutup</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Hamzah RPL. Dibuat dengan ❤️ dan semangat belajar.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
